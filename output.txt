@@ -1,0 +1,329 @@
+  Order Date Product Name     Category          Area  Quantity  Buyer Price  Seller Price  Profit  Sales  Total Profit
+0   1/1/2022        Mouse  Accessories  Motavarachha         3           50           150     100   3474        347400
+1   1/1/2022     Keyboard  Accessories  Motavarachha         6          900          1000     100   6372        637200
+2   1/1/2022       Tablet  Electronics     Katargaam         9         5500          7500    2000   9234      18468000
+3   1/1/2022   Headphones  Accessories          Vesu         7         1500          2000     500   3941       1970500
+4   1/2/2022        Mouse  Accessories     Katargaam         8           50           150     100   6600        660000
+<class 'pandas.DataFrame'>
+RangeIndex: 1720 entries, 0 to 1719
+Data columns (total 10 columns):
+ #   Column        Non-Null Count  Dtype
+---  ------        --------------  -----
+ 0   Order Date    1720 non-null   str  
+ 1   Product Name  1720 non-null   str  
+ 2   Category      1720 non-null   str  
+ 3   Area          1720 non-null   str  
+ 4   Quantity      1720 non-null   int64
+ 5   Buyer Price   1720 non-null   int64
+ 6   Seller Price  1720 non-null   int64
+ 7   Profit        1720 non-null   int64
+ 8   Sales         1720 non-null   int64
+ 9   Total Profit  1720 non-null   int64
+dtypes: int64(6), str(4)
+memory usage: 134.5 KB
+          Quantity   Buyer Price  Seller Price       Profit         Sales  Total Profit
+count  1720.000000   1720.000000   1720.000000  1720.000000   1720.000000  1.720000e+03
+mean      4.970930  14612.645349  17282.558140  2669.912791   3074.393023  8.559919e+06
+std       2.511932  20044.329326  22313.561508  3050.108047   2420.433871  1.422517e+07
+min       1.000000     50.000000    150.000000   100.000000     54.000000  9.500000e+03
+25%       3.000000   1500.000000   1750.000000   250.000000   1063.500000  5.127500e+05
+50%       5.000000   5500.000000   6800.000000  1300.000000   2411.000000  2.451000e+06
+75%       7.000000  15500.000000  25000.000000  5000.000000   4599.000000  9.209000e+06
+max       9.000000  55000.000000  62000.000000  9500.000000  10629.000000  9.276750e+07
+data types:
+ Order Date        str
+Product Name      str
+Category          str
+Area              str
+Quantity        int64
+Buyer Price     int64
+Seller Price    int64
+Profit          int64
+Sales           int64
+Total Profit    int64
+dtype: object
+
+Quantitative Data: int64 and float64
+Quantitative Data:       Quantity  Buyer Price  Seller Price  Profit  Sales  Total Profit
+0            3           50           150     100   3474        347400
+1            6          900          1000     100   6372        637200
+2            9         5500          7500    2000   9234      18468000
+3            7         1500          2000     500   3941       1970500
+4            8           50           150     100   6600        660000
+...        ...          ...           ...     ...    ...           ...
+1715         9        55000         62000    7000   8550      59850000
+1716         6         6500          8000    1500   5004       7506000
+1717         5         5500          6800    1300   2275       2957500
+1718         1           50           150     100    746         74600
+1719         1        50000         55000    5000    379       1895000
+
+[1720 rows x 6 columns]
+Quantitative column labels:
+ Index(['Quantity', 'Buyer Price', 'Seller Price', 'Profit', 'Sales',
+       'Total Profit'],
+      dtype='str')
+
+Qualitative Data: object and category
+D:\RJ\ML Project\SPP.py:24: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+  qualitative = df.select_dtypes(include=['object', 'category'])
+Qualitative Data:       Order Date Product Name     Category          Area
+0       1/1/2022        Mouse  Accessories  Motavarachha
+1       1/1/2022     Keyboard  Accessories  Motavarachha
+2       1/1/2022       Tablet  Electronics     Katargaam
+3       1/1/2022   Headphones  Accessories          Vesu
+4       1/2/2022        Mouse  Accessories     Katargaam
+...          ...          ...          ...           ...
+1715  12/29/2024       Laptop  Electronics          Vesu
+1716  12/29/2024      Monitor  Accessories          Vesu
+1717  12/29/2024      Printer       Office        Adajan
+1718  12/30/2024        Mouse  Accessories     Katargaam
+1719  12/30/2024       Camera  Electronics     Katargaam
+
+[1720 rows x 4 columns]
+Qualitative column labels:
+ Index(['Order Date', 'Product Name', 'Category', 'Area'], dtype='str')
+
+Skewness:
+ Quantity        0.002938
+Buyer Price     1.287514
+Seller Price    1.178538
+Profit          1.098328
+Sales           0.893263
+Total Profit    2.627449
+dtype: float64
+
+Kurtosis:
+ Quantity       -1.164417
+Buyer Price    -0.153874
+Seller Price   -0.339522
+Profit         -0.182762
+Sales          -0.029347
+Total Profit    7.477166
+dtype: float64
+Feature: Product Name                        |██████████████████████▏                                                                                                   | [ 18%]   00:00 -> (00:00 left)findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+Feature: Category                            |█████████████████████████████████▎                                                                                        | [ 27%]   00:00 -> (00:00 left)findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+Feature: Area                                |████████████████████████████████████████████▎                                                                             | [ 36%]   00:00 -> (00:01 left)findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+Feature: Quantity                            |███████████████████████████████████████████████████████▍                                                                  | [ 45%]   00:01 -> (00:01 left)findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+Feature: Buyer Price                         |██████████████████████████████████████████████████████████████████▌                                                       | [ 55%]   00:01 -> (00:01 left)findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+Feature: Seller Price                        |█████████████████████████████████████████████████████████████████████████████▋                                            | [ 64%]   00:01 -> (00:01 left)findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+Feature: Profit                              |████████████████████████████████████████████████████████████████████████████████████████▋                                 | [ 73%]   00:02 -> (00:00 left)findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+Feature: Sales                               |███████████████████████████████████████████████████████████████████████████████████████████████████▊                      | [ 82%]   00:02 -> (00:00 left)findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+Feature: Total Profit                        |██████████████████████████████████████████████████████████████████████████████████████████████████████████████▉           | [ 91%]   00:03 -> (00:00 left)findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+Feature: Total Profit                        |██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| [100%]   00:04 -> (00:00 left)findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+[Step 3/3] Generating associations graph     |                                                                                                                              | [  0%]   00:00 -> (? left)findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+findfont: Failed to find font weight normal, now using 500.
+Done! Use 'show' commands to display/save.   |██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| [100%]   00:01 -> (00:00 left)
+Report Sweetviz_Report.html was generated! NOTEBOOK/COLAB USERS: the web browser MAY not pop up, regardless, the report IS saved in your notebook/colab files.
+Dependent Variable:
+0        100
+1        100
+2       2000
+3        500
+4        100
+        ... 
+1715    7000
+1716    1500
+1717    1300
+1718     100
+1719    5000
+Name: Profit, Length: 1720, dtype: int64
+
+Independent Variables:
+      Sales
+0      3474
+1      6372
+2      9234
+3      3941
+4      6600
+...     ...
+1715   8550
+1716   5004
+1717   2275
+1718    746
+1719    379
+
+[1720 rows x 1 columns]
+
+Training Data:
+X_train: (1376, 1)
+y_train: (1376,)
+
+Testing Data:
+X_test: (344, 1)
+y_test: (344,)
+LINEAR REGRESSION MODEL
+Model Training Completed Successfully!
+
+Actual Values:
+[1300  500  100  100 7000 7000 7000 5000  100 9500  250 1300  100  500
+ 1300 1300 7000  250  250 5000 1300 2000  100  250  500  100  100  500
+ 1300 1500  100 7000 1300 1500  250  100  100  100 9500  250  100 7000
+ 1500  500  250 1500 1300 1500 1500 5000  500 5000 9500 1300 7000 2000
+ 7000 1300 5000  500 9500  100  100 9500 5000 2000 9500  100 1300 2000
+ 1300 1300 7000 1500  100  100  500  100  500  250 7000 1500 5000  100
+  250 9500 9500  100 1300 1500  250  500 1500 1500 2000 7000  100 1300
+ 9500 2000 7000 9500  250 7000 7000  100 5000  100 9500 7000 2000 2000
+ 2000 2000  500 5000  100 1500  250  250  100 5000  250 1300 1500 9500
+  100  100  100  100 5000 1500 1500  100  100 2000 7000  250  500 9500
+ 1300 7000  250  100 9500 7000 9500 7000 9500 2000 1300 7000 9500 1300
+ 2000  500  100 1500 2000  250  250  100 9500 5000  100 7000  100  500
+  100 5000 2000  500 2000 5000  250 7000  100 9500 1500  100 7000 1300
+ 1300 1500  500  100 1300  500 7000 5000 2000 1500 9500 9500 7000  500
+ 1300 7000 1300  250  500 9500 5000  500 2000  100 2000 1300  250 7000
+  100  100 7000  100 1300  500  500 1500  100 1300 1500 9500 9500 1300
+  100 2000 2000  500  100  500  250  250  500 1500 9500 1500 2000  250
+ 5000  250 9500 7000  500  500  500 9500 9500 1300  500  500  100  100
+  100  500 1300 1500  250  250  100 2000  250  500  500 7000 7000 5000
+ 9500  250 1500  100 9500  500 1500  250 2000 7000 5000 7000 5000  100
+ 2000 9500 5000 7000 5000 7000  100 2000 2000 9500 5000  100  250 2000
+ 7000  500 9500 1300 9500 5000 7000  100 1500  100 2000  500  100 2000
+ 2000 2000  100  100  500 7000 1500 7000  500 9500 5000 2000  500 7000
+ 1300 1500 1500 2000 1300 2000 9500  500 2000 1500 7000  250  250 5000
+ 1500  100  100 1500 5000 1300 2000 7000]
+
+Predicted Values:
+[2682.56993767 2512.31090756 2986.52682739 2466.23843626 2721.76189349
+ 2686.61729971 2437.09742953 2707.59612632 2637.64421895 2937.28392248
+ 2561.89109264 2444.18031311 2650.19104129 2635.62053792 2596.76586227
+ 2604.3209381  2608.30084411 2474.26570432 2772.82611131 2577.33852445
+ 2490.45515251 2740.98686321 2657.20646884 2459.02064061 2516.08844547
+ 2474.53552846 2599.46410364 2675.95924632 2499.22443695 2608.43575618
+ 2490.52260854 2495.31198697 2512.04108343 2812.89499558 2798.32449221
+ 2505.29548002 2814.7163085  2428.32814509 2922.78087515 2485.73323012
+ 2608.09847601 2543.34068326 2852.55914364 2812.82753954 2532.88499797
+ 2731.54301843 2779.16697852 2574.10063481 2797.11028359 2614.77662338
+ 3083.66351651 2728.17021673 2498.81970074 2952.66389826 2497.67294816
+ 2598.04752692 2428.9352494  2540.91226603 2801.09018961 2427.65358475
+ 2582.46518304 2599.1942795  2474.26570432 3022.00870133 3073.34274329
+ 2771.07225443 2553.86382458 2534.70631089 2648.36972837 2729.51933741
+ 2548.19751771 2499.15698091 2898.42924683 2486.94743874 2808.44289733
+ 2576.0568598  2559.93486765 2607.55882773 2470.48816641 2475.54736897
+ 2473.86096812 2444.98978552 2629.95423106 2520.27071959 2564.7917021
+ 2475.0077207  2574.37045895 2497.40312402 2502.46232658 2789.95994398
+ 2439.66075882 2627.72818193 2463.5401949  2425.89972786 2441.75189588
+ 2570.05327277 2757.64850364 2434.06190799 2881.49778227 2714.13936163
+ 2430.01454594 2605.26532257 2455.78275098 2437.29979763 2469.61123797
+ 2658.28576539 2735.45546841 2485.32849392 2622.26424317 2768.57638116
+ 2699.8386824  2540.97972206 2652.28217835 2518.24703857 2584.89360027
+ 2623.07371558 2774.84979234 2792.92800948 2898.96889511 2473.05149571
+ 2673.5308291  2495.98654731 2842.64310662 2913.06720624 2456.52476735
+ 2472.51184744 2500.16882142 2886.01733656 2833.53654202 2727.90039259
+ 2514.80678083 2780.111363   3124.33950508 2828.81461963 2679.33204803
+ 2463.67510697 2668.4041705  2536.05543157 2481.41604394 2458.07625614
+ 2676.4988946  2484.45156547 2745.16913733 2700.91797895 2426.169552
+ 2559.53013144 2449.64425187 2877.92261246 2788.00371899 3026.59571165
+ 2586.71491319 2797.5150198  2545.36436428 2447.82293895 2462.86563456
+ 2810.06184214 2642.0963172  2629.34712675 2479.05508275 2846.42064453
+ 2815.3234128  2495.31198697 2444.98978552 2563.03784522 2842.30582645
+ 2584.353952   2595.95638987 2490.99480078 2671.1698679  2526.94886697
+ 2641.82649306 2495.44689903 2462.79817852 2460.30230526 2689.58536522
+ 2553.25672027 2800.14580513 2442.62882432 2666.92013775 2697.68008931
+ 2640.74719652 2845.27389195 2913.67431054 2582.73500718 2604.86058637
+ 2446.81109844 2491.87172923 2823.2157688  2625.70450091 2491.12971285
+ 2596.226214   2730.86845809 2693.9025514  2486.00305426 2444.04540104
+ 2460.7744975  2430.28437008 2502.19250245 2642.83833357 2498.81970074
+ 2458.41353631 2513.99730842 2504.0812714  2647.15551976 2458.75081648
+ 2470.48816641 2520.27071959 2987.13393169 2535.24595916 2446.06908206
+ 2546.780941   3004.7399566  2546.03892462 2498.01022833 2532.00806952
+ 2818.56130244 2745.5064175  2644.52473443 2784.02381298 2532.21043763
+ 2551.97505562 2692.08123848 2648.97683268 2874.75217886 2662.60295157
+ 2463.742563   2455.78275098 2474.06333622 2953.1360905  2488.49892752
+ 2631.57317588 2495.98654731 2620.64529835 2514.33458859 2591.63920368
+ 2493.69304215 2599.1942795  2478.24561034 2601.82506483 2653.22656283
+ 2542.32884274 2460.3697613  2878.86699694 2435.41102867 2691.06939797
+ 2885.14040811 2765.94559583 2519.05651097 2610.12215703 2490.85988872
+ 2505.49784812 2827.06076274 2449.98153204 2807.22868871 2495.51435507
+ 2666.38048948 2442.15663208 2709.95708752 2503.54162313 2549.20935822
+ 2634.60869741 2440.94242347 2589.27824249 2472.51184744 2962.24265511
+ 2468.05974918 2854.78519276 3113.41162756 2485.32849392 2724.59504692
+ 2792.65818534 2687.76405229 2901.1274882  2511.63634722 2478.98762671
+ 2460.70704147 2704.69551686 3050.27277963 2507.72389724 2668.80890671
+ 2646.95315166 2865.51070219 2470.62307848 2946.52539916 2763.92191481
+ 2504.48600761 2518.24703857 2522.15948854 2459.15555268 2498.21259643
+ 2880.41848573 2807.63342492 3014.99327378 2956.91362841 2638.11641119
+ 2450.25135618 2569.85090466 2924.60218807 2772.75865528 2649.11174475
+ 2789.42029571 2524.18316957 2492.74865767 2476.35684138 2448.9022355
+ 2573.2911624  2505.90258432 2500.57355763 2607.4913717  2630.76370347
+ 2454.97327857 2579.15983737 2462.12361818 2802.37185425 2510.21977051
+ 2483.84446117 2589.75043473 2938.9028673  3001.09733076 3057.55803131
+ 2495.1770749  2679.8716963  2504.89074381 2852.0869514  2600.00375191
+ 2531.87315746 2618.21688112 2650.7981456  2472.10711123 2621.45477076
+ 2787.26170261 2494.77233869 2601.21796053 2682.36756957 2509.27538603
+ 2788.8131914  2435.0737485  2510.15231447 2540.91226603 2778.89715438
+ 2780.5160992  2475.88464914 2602.43216914 2436.28795712]
+
+Coefficient: 0.06745603411430841
+Intercept: 2421.9198218502597
+MODEL EVALUATION
+Mean Absolute Error (MAE): 2672.3327932320867
+Mean Squared Error (MSE): 10279548.333903972
+R² Score: -0.004185784469440623
+
+Regression Equation:
+Profit = 0.07 * Sales + 2421.92
+2026-09-27 11:51:58,227 - WARNING  - findfont: Failed to find font weight normal, now using 500.
+Model trained successfully!
+MODEL EVALUATION - REGRESSION
+R² Score : -0.004185784469440623
+MSE      : 10279548.333903972
+RMSE     : 3206.173472210132
+Accuracy : 0.18023255813953487
+C:\Users\ASUS\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\sklearn\metrics\_classification.py:1879: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Precision: 0.04474568851369245
+Recall   : 0.18023255813953487
+F1 Score : 0.06288167938931298
+
+MODEL COMPARISON
+               Model  R2 Score           MSE         RMSE  Cross Validation R2
+0  Linear Regression -0.004186  1.027955e+07  3206.173472            -0.001634
+1   Ridge Regression -0.004186  1.027955e+07  3206.173472            -0.001634
+2   Lasso Regression -0.004186  1.027955e+07  3206.173461            -0.001634
+
+CROSS VALIDATION SCORES
+Linear Regression: [ 0.00251011 -0.00811881 -0.00190433  0.0022209  -0.00287734]
+Ridge Regression : [ 0.00251011 -0.00811881 -0.00190433  0.0022209  -0.00287734]
+Lasso Regression : [ 0.00251009 -0.00811879 -0.00190433  0.00222089 -0.00287733]
